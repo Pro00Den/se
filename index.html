@@ -1,500 +1,696 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="StreamExpert — Создание контентных и товарных стримов под ключ."
+        />
+        <title>StreamExpert — Создание стримов под ключ</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="StreamExpert — Создание контентных и товарных стримов под ключ." />
-  <title>StreamExpert — Создание стримов под ключ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-
-  <!-- ══════════════════════════════
+    <body>
+        <!-- ══════════════════════════════
        NAVIGATION
   ══════════════════════════════ -->
-  <nav class="nav" id="nav">
-    <div class="nav__inner container">
-      <a href="#" class="nav__logo" id="nav-logo">StreamExpert</a>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#clients">Клиенты</a></li>
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#audience">Для кого</a></li>
-        <li><a href="#advantages">Преимущества</a></li>
-      </ul>
-      <div class="nav__actions">
-        <a href="#contact" class="btn btn--primary btn--lg" id="nav-cta">Получить концепт</a>
-      </div>
-      <button class="nav__burger" id="nav-burger" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+        <nav class="nav" id="nav">
+            <div class="nav__inner container">
+                <a href="#" class="nav__logo" id="nav-logo">StreamExpert</a>
+                <ul class="nav__links" id="nav-links">
+                    <li><a href="#clients">Клиенты</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#audience">Для кого</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a
+                        href="#contact"
+                        class="btn btn--primary btn--lg"
+                        id="nav-cta"
+                        >Получить концепт</a
+                    >
+                </div>
+                <button
+                    type="button"
+                    class="nav__burger"
+                    id="nav-burger"
+                    aria-label="Меню"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
 
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        HERO
   ══════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero__bg-glow"></div>
-    <div class="container">
-      <div class="hero__inner">
+        <section class="hero" id="hero">
+            <div class="hero__bg-glow"></div>
+            <div class="container">
+                <div class="hero__inner">
+                    <!-- LEFT: text content -->
+                    <div class="hero__content">
+                        <span class="hero__eyebrow reveal-up"
+                            >Студия прямых эфиров</span
+                        >
+                        <h1
+                            class="hero__title reveal-up"
+                            style="--delay: 0.05s"
+                        >
+                            Организация<br />онлайн-трансляций
+                        </h1>
+                        <p
+                            class="hero__description reveal-up"
+                            style="--delay: 0.15s"
+                        >
+                            Безупречное качество каждого проекта — от идеи до
+                            финального эфира
+                        </p>
+                        <div
+                            class="hero__actions reveal-up"
+                            style="--delay: 0.25s"
+                        >
+                            <a href="#contact" class="btn btn--danger btn--lg"
+                                >Обсудить задачи</a
+                            >
+                            <a href="#services" class="btn btn--outline btn--lg"
+                                >Наши услуги</a
+                            >
+                        </div>
+                    </div>
 
-        <!-- LEFT: text content -->
-        <div class="hero__content">
-          <span class="hero__eyebrow reveal-up">Студия прямых эфиров</span>
-          <h1 class="hero__title reveal-up" style="--delay:0.05s">Организация<br>онлайн-трансляций</h1>
-          <p class="hero__description reveal-up" style="--delay: 0.15s">
-            Безупречное качество каждого проекта — от идеи до финального эфира
-          </p>
-          <div class="hero__actions reveal-up" style="--delay: 0.25s">
-            <a href="#contact" class="btn btn--danger btn--lg">Обсудить задачи</a>
-            <a href="#services" class="btn btn--outline btn--lg">Наши услуги</a>
-          </div>
-        </div>
+                    <!-- RIGHT: phone mockup with video -->
+                    <div class="hero__phone-wrap" id="hero-phone-wrap">
+                        <div class="phone-mockup" id="phone-mockup">
+                                <!-- phone frame -->
+                                <div class="phone-mockup__frame">
+                                    <!-- notch / dynamic island -->
+                                    <div class="phone-mockup__island"></div>
+                                    <!-- screen with video -->
+                                    <div class="phone-mockup__screen">
+                                        <video
+                                            class="phone-mockup__video"
+                                            autoplay
+                                            muted
+                                            loop
+                                            playsinline
+                                            poster="img/hero-bg.jpg"
+                                        >
+                                            <source
+                                                src="video/showreel.webm"
+                                                type="video/webm"
+                                            />
+                                            Your browser does not support the
+                                            video tag.
+                                        </video>
+                                        <!-- live badge overlay -->
 
-        <!-- RIGHT: phone mockup with video -->
-        <div class="hero__phone-wrap" id="hero-phone-wrap">
-          <div class="phone-mockup" id="phone-mockup">
-            <!-- phone frame -->
-            <div class="phone-mockup__frame">
-              <!-- notch / dynamic island -->
-              <div class="phone-mockup__island"></div>
-              <!-- screen with video -->
-              <div class="phone-mockup__screen" style="pointer-events: none;">
-                <div id="yt-player" style="width: 100%; height: 100%;"></div>
-                <!-- live badge overlay -->
-                <div class="phone-mockup__live-badge">
-                  <span class="live-dot"></span> LIVE
+                                        <div class="phone-mockup__live-badge">
+                                            <span class="live-dot"></span> LIVE
+                                        </div>
+                                        <!-- viewer count -->
+                                        <div class="phone-mockup__viewers">
+                                            <span id="live-viewers-count"
+                                                >4 789</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <!-- side buttons -->
+                                    <div
+                                        class="phone-mockup__btn phone-mockup__btn--vol-up"
+                                    ></div>
+                                    <div
+                                        class="phone-mockup__btn phone-mockup__btn--vol-dn"
+                                    ></div>
+                                    <div
+                                        class="phone-mockup__btn phone-mockup__btn--power"
+                                    ></div>
+                                </div>
+                                <!-- reflection / glow -->
+                                <div class="phone-mockup__glow"></div>
+                            </div>
+                            <!-- reflection / glow -->
+                            <div class="phone-mockup__glow"></div>
+                        </div>
+                    </div>
                 </div>
-                <!-- viewer count -->
-                <div class="phone-mockup__viewers">👁 <span id="live-viewers-count">12 847</span></div>
-              </div>
-              <!-- side buttons -->
-              <div class="phone-mockup__btn phone-mockup__btn--vol-up"></div>
-              <div class="phone-mockup__btn phone-mockup__btn--vol-dn"></div>
-              <div class="phone-mockup__btn phone-mockup__btn--power"></div>
+                <!-- End of hero__inner -->
+
+                <!-- Glass Stats below the phone -->
+                <div class="hero__stats-glass reveal-up" style="--delay: 0.4s">
+                    <div class="hero__stat-glass">
+                        <div class="hero__stat-val">
+                            &gt;
+                            <span class="stat__number" data-target="5">0</span>
+                            лет
+                        </div>
+                        <div class="hero__stat-label">ОПЫТА</div>
+                    </div>
+                    <div class="hero__stat-glass">
+                        <div class="hero__stat-val">
+                            &gt;
+                            <span class="stat__number" data-target="10000"
+                                >0</span
+                            >
+                        </div>
+                        <div class="hero__stat-label">СТРИМОВ</div>
+                    </div>
+                    <div class="hero__stat-glass">
+                        <div class="hero__stat-val">
+                            &gt;
+                            <span class="stat__number" data-target="1000000"
+                                >0</span
+                            >
+                        </div>
+                        <div class="hero__stat-label">ЗРИТЕЛЕЙ</div>
+                    </div>
+                </div>
             </div>
-            <!-- reflection / glow -->
-            <div class="phone-mockup__glow"></div>
-          </div>
-        </div>
+        </section>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        INTRO TEXT (Clients)
   ══════════════════════════════ -->
-  <section class="section section--intro" id="clients">
-    <div class="container">
-      <div class="hero__stats">
-        <div class="hero__stat">
-          <div class="hero__stat-val">&gt; <span class="stat__number" data-target="5">0</span> лет</div>
-          <div class="hero__stat-label">опыта</div>
-        </div>
-        <div class="hero__stat">
-          <div class="hero__stat-val">&gt; <span class="stat__number" data-target="10000">0</span></div>
-          <div class="hero__stat-label">стримов</div>
-        </div>
-        <div class="hero__stat">
-          <div class="hero__stat-val">&gt; <span class="stat__number" data-target="1000000">0</span></div>
-          <div class="hero__stat-label">зрителей</div>
-        </div>
-        <p class="intro-heading reveal-up">Нам доверяют лидеры рынка.</p>
-      </div>
-    </div>
-  </section>
+        <section class="section section--intro" id="clients">
+            <div class="container">
+                <p class="intro-heading reveal-up">
+                    Нам доверяют лидеры рынка.
+                </p>
+            </div>
+        </section>
 
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        TICKER (Logos)
   ══════════════════════════════ -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <div class="ticker__group">
-        <img src="img/medsi-logo.svg" alt="МЕДСИ" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/sbermarket.svg" alt="СберМаркет" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo2.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/mvideo.webp" alt="М.Видео" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo4.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/lenta.svg" alt="Лента" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/medsi-logo.svg" alt="МЕДСИ" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/sbermarket.svg" alt="СберМаркет" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo2.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/mvideo.webp" alt="М.Видео" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo4.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/lenta.svg" alt="Лента" class="ticker__logo"><span class="ticker__dot">·</span>
-      </div>
-      <div class="ticker__group" aria-hidden="true">
-        <img src="img/medsi-logo.svg" alt="МЕДСИ" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/sbermarket.svg" alt="СберМаркет" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo2.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/mvideo.webp" alt="М.Видео" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo4.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/lenta.svg" alt="Лента" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/medsi-logo.svg" alt="МЕДСИ" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/sbermarket.svg" alt="СберМаркет" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo2.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/mvideo.webp" alt="М.Видео" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/logo4.webp" alt="Логотип" class="ticker__logo"><span class="ticker__dot">·</span>
-        <img src="img/lenta.svg" alt="Лента" class="ticker__logo"><span class="ticker__dot">·</span>
-      </div>
-    </div>
-  </div>
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker__track">
+                <div class="ticker__group">
+                    <img
+                        src="img/medsi-logo.svg"
+                        alt="МЕДСИ"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/sbermarket.svg"
+                        alt="СберМаркет"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/logo2.webp"
+                        alt="Логотип"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/mvideo.webp"
+                        alt="М.Видео"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/logo4.webp"
+                        alt="Логотип"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/lenta.svg"
+                        alt="Лента"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/medsi-logo.svg"
+                        alt="МЕДСИ"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/sbermarket.svg"
+                        alt="СберМаркет"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/logo2.webp"
+                        alt="Логотип"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/mvideo.webp"
+                        alt="М.Видео"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/logo4.webp"
+                        alt="Логотип"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                    <img
+                        src="img/lenta.svg"
+                        alt="Лента"
+                        class="ticker__logo"
+                    /><span class="ticker__dot">·</span>
+                </div>
+            </div>
+        </div>
 
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        SERVICES (Что мы делаем)
   ══════════════════════════════ -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <h2 class="section-title" style="text-align: left;">Что мы делаем</h2>
-        <p class="section-subtitle" style="text-align: left;">Полный цикл продюсирования стримов под ключ</p>
-      </div>
-      <div class="svc-grid">
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title u-text-left">Что мы делаем</h2>
+                    <p class="section-subtitle u-text-left">
+                        Полный цикл продюсирования стримов под ключ
+                    </p>
+                </div>
+                <div class="svc-grid">
+                    <!-- 1: Деловые — wide, image -->
+                    <article
+                        class="svc-card svc-card--img svc-card--pos-1 reveal-up"
+                        style="--delay: 0s"
+                    >
+                        <div class="svc-card__overlay"></div>
+                        <div class="svc-card__content">
+                            <h3 class="svc-card__title">
+                                Трансляции деловых мероприятий
+                            </h3>
+                            <div class="svc-card__tags">
+                                <span>конференции</span><span>вебинары</span
+                                ><span>семинары</span>
+                                <span>бизнес-встречи</span><span>форумы</span
+                                ><span>выставки</span><span>тренинги</span>
+                            </div>
+                            <span class="svc-card__link">Подробнее ›</span>
+                        </div>
+                    </article>
 
-        <!-- 1: Деловые — wide, image -->
-        <article class="svc-card svc-card--img reveal-up" style="--delay:0s; grid-column: 1 / 3; grid-row: 1;">
-          <div class="svc-card__overlay"></div>
-          <div class="svc-card__content">
-            <h3 class="svc-card__title">Трансляции деловых мероприятий</h3>
-            <div class="svc-card__tags">
-              <span>конференции</span><span>вебинары</span><span>семинары</span>
-              <span>бизнес-встречи</span><span>форумы</span><span>выставки</span><span>тренинги</span>
+                    <!-- 2: Медицинские — tall, image (spans rows 1–2) -->
+                    <article
+                        class="svc-card svc-card--img svc-card--pos-2 reveal-up"
+                        style="--delay: 0.1s"
+                    >
+                        <div class="svc-card__overlay"></div>
+                        <div class="svc-card__content">
+                            <h3 class="svc-card__title">
+                                Медицинские трансляции
+                            </h3>
+                            <p class="svc-card__body">
+                                Live-трансляции операций в режиме реального
+                                времени с возможностью коммуникации с
+                                оперирующими хирургами.
+                            </p>
+                            <span class="svc-card__link">Подробнее ›</span>
+                        </div>
+                    </article>
+
+                    <!-- 3: Развлекательные — tall, image (spans rows 2–3) -->
+                    <article
+                        class="svc-card svc-card--img svc-card--pos-3 reveal-up"
+                        style="--delay: 0.2s"
+                    >
+                        <div class="svc-card__overlay"></div>
+                        <div class="svc-card__content">
+                            <h3 class="svc-card__title">
+                                Трансляции развлекательных событий
+                            </h3>
+                            <div class="svc-card__tags">
+                                <span>корпоративы</span><span>концерты</span
+                                ><span>церемонии</span> <span>соревнования</span
+                                ><span>фестивали</span><span>праздники</span
+                                ><span>показы</span>
+                            </div>
+                            <span class="svc-card__link">Подробнее ›</span>
+                        </div>
+                    </article>
+
+                    <!-- 4: Телемосты — content -->
+                    <article
+                        class="svc-card svc-card--content svc-card--pos-4 reveal-up"
+                        style="--delay: 0.3s"
+                    >
+                        <div class="svc-card__content">
+                            <h3 class="svc-card__title">Телемосты</h3>
+                            <p class="svc-card__body">
+                                Онлайн-встречи, выступление удалённых спикеров
+                                или общение с сотрудниками в высоком качестве.
+                            </p>
+                            <span class="svc-card__link">Подробнее ›</span>
+                        </div>
+                    </article>
+
+                    <!-- 5: Спортивные — content -->
+                    <article
+                        class="svc-card svc-card--content svc-card--pos-5 reveal-up"
+                        style="--delay: 0.4s"
+                    >
+                        <div class="svc-card__content">
+                            <h3 class="svc-card__title">
+                                Трансляции спортивных мероприятий
+                            </h3>
+                            <p class="svc-card__body">
+                                Трансляции профессиональных и любительских
+                                матчей на закрытые и открытые платформы в
+                                формате HD и 4K.
+                            </p>
+                            <span class="svc-card__link">Подробнее ›</span>
+                        </div>
+                    </article>
+
+                    <!-- 6: Киберспорт — content -->
+                    <article
+                        class="svc-card svc-card--content svc-card--pos-6 reveal-up"
+                        style="--delay: 0.5s"
+                    >
+                        <div class="svc-card__content">
+                            <h3 class="svc-card__title">
+                                Трансляции киберспортивных мероприятий
+                            </h3>
+                            <p class="svc-card__body">
+                                Качественные трансляции матчей и турниров — от
+                                локальных соревнований до мировых спортивных
+                                событий.
+                            </p>
+                            <span class="svc-card__link">Подробнее ›</span>
+                        </div>
+                    </article>
+
+                    <!-- 7: Студийная — wide, image -->
+                    <article
+                        class="svc-card svc-card--img svc-card--pos-7 reveal-up"
+                        style="--delay: 0.6s"
+                    >
+                        <div class="svc-card__overlay"></div>
+                        <div class="svc-card__content">
+                            <h3 class="svc-card__title">Студийная съёмка</h3>
+                            <p class="svc-card__body">
+                                Съёмка в профессиональной студии и проведение
+                                стримов.
+                            </p>
+                            <span class="svc-card__link">Подробнее ›</span>
+                        </div>
+                    </article>
+
+                    <!-- 8: CTA -->
+                    <article
+                        class="svc-card svc-card--cta svc-card--pos-8 reveal-up"
+                        style="--delay: 0.7s"
+                    >
+                        <div
+                            class="svc-card__content u-flex-column u-justify-between u-h-full"
+                        >
+                            <div>
+                                <h3 class="svc-card__title">
+                                    Ваша особенная трансляция
+                                </h3>
+                                <p class="svc-card__body">
+                                    Реализуем любой нестандартный проект под
+                                    ваши задачи. Оставьте заявку, и мы предложим
+                                    оптимальное решение.
+                                </p>
+                            </div>
+                            <a
+                                href="#contact"
+                                class="btn btn--danger btn--lg u-mt-s4 u-align-self-start"
+                                >Оставить заявку</a
+                            >
+                        </div>
+                    </article>
+                </div>
             </div>
-            <span class="svc-card__link">Подробнее ›</span>
-          </div>
-        </article>
+        </section>
 
-        <!-- 2: Медицинские — tall, image (spans rows 1–2) -->
-        <article class="svc-card svc-card--img reveal-up" style="--delay:0.1s; grid-column: 3; grid-row: 1 / 3;">
-          <div class="svc-card__overlay"></div>
-          <div class="svc-card__content">
-            <h3 class="svc-card__title">Медицинские трансляции</h3>
-            <p class="svc-card__body">Live-трансляции операций в режиме реального времени с возможностью коммуникации с
-              оперирующими хирургами.</p>
-            <span class="svc-card__link">Подробнее ›</span>
-          </div>
-        </article>
-
-        <!-- 3: Развлекательные — tall, image (spans rows 2–3) -->
-        <article class="svc-card svc-card--img reveal-up" style="--delay:0.2s; grid-column: 1; grid-row: 2 / 4;">
-          <div class="svc-card__overlay"></div>
-          <div class="svc-card__content">
-            <h3 class="svc-card__title">Трансляции развлекательных событий</h3>
-            <div class="svc-card__tags">
-              <span>корпоративы</span><span>концерты</span><span>церемонии</span>
-              <span>соревнования</span><span>фестивали</span><span>праздники</span><span>показы</span>
-            </div>
-            <span class="svc-card__link">Подробнее ›</span>
-          </div>
-        </article>
-
-        <!-- 4: Телемосты — content -->
-        <article class="svc-card svc-card--content reveal-up" style="--delay:0.3s; grid-column: 2; grid-row: 2;">
-          <div class="svc-card__content">
-            <h3 class="svc-card__title">Телемосты</h3>
-            <p class="svc-card__body">Онлайн-встречи, выступление удалённых спикеров или общение с сотрудниками в
-              высоком качестве.</p>
-            <span class="svc-card__link">Подробнее ›</span>
-          </div>
-        </article>
-
-        <!-- 5: Спортивные — content -->
-        <article class="svc-card svc-card--content reveal-up" style="--delay:0.4s; grid-column: 2; grid-row: 3;">
-          <div class="svc-card__content">
-            <h3 class="svc-card__title">Трансляции спортивных мероприятий</h3>
-            <p class="svc-card__body">Трансляции профессиональных и любительских матчей на закрытые и открытые платформы
-              в формате HD и 4K.</p>
-            <span class="svc-card__link">Подробнее ›</span>
-          </div>
-        </article>
-
-        <!-- 6: Киберспорт — content -->
-        <article class="svc-card svc-card--content reveal-up" style="--delay:0.5s; grid-column: 3; grid-row: 3;">
-          <div class="svc-card__content">
-            <h3 class="svc-card__title">Трансляции киберспортивных мероприятий</h3>
-            <p class="svc-card__body">Качественные трансляции матчей и турниров — от локальных соревнований до мировых
-              спортивных событий.</p>
-            <span class="svc-card__link">Подробнее ›</span>
-          </div>
-        </article>
-
-        <!-- 7: Студийная — wide, image -->
-        <article class="svc-card svc-card--img reveal-up" style="--delay:0.6s; grid-column: 1 / 3; grid-row: 4;">
-          <div class="svc-card__overlay"></div>
-          <div class="svc-card__content">
-            <h3 class="svc-card__title">Студийная съёмка</h3>
-            <p class="svc-card__body">Съёмка в профессиональной студии и проведение стримов.</p>
-            <span class="svc-card__link">Подробнее ›</span>
-          </div>
-        </article>
-
-        <!-- 8: CTA -->
-        <article class="svc-card svc-card--cta reveal-up"
-          style="--delay:0.7s; grid-column: 3; grid-row: 4; background: var(--c-surface); border: 1px solid rgba(255,0,68,0.2);">
-          <div class="svc-card__content"
-            style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-            <div>
-              <h3 class="svc-card__title">Ваша особенная трансляция</h3>
-              <p class="svc-card__body">Реализуем любой нестандартный проект под ваши задачи. Оставьте заявку, и мы
-                предложим оптимальное решение.</p>
-            </div>
-            <a href="#contact" class="btn btn--danger btn--lg"
-              style="margin-top: var(--s4); align-self: flex-start;">Оставить заявку</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        AUDIENCE (Кому подойдут)
   ══════════════════════════════ -->
-  <section class="section section--dark" id="audience">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <h2 class="section-title">Для кого мы создаем<br>продающие трансляции?</h2>
-      </div>
-    </div>
-    <div class="showcase-scroll" id="showcase-scroll">
-      <div class="showcase-track">
-        <article class="showcase-card reveal-up" style="--delay:0s">
-          <div class="showcase-card__media">
-            <div class="media-placeholder media-placeholder--case">
-              <div class="placeholder-shimmer"></div>
-              <span class="placeholder-label">Бренды и e-commerce</span>
+        <section class="section section--dark" id="audience">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">
+                        Для кого мы создаем<br />продающие трансляции?
+                    </h2>
+                </div>
             </div>
-          </div>
-          <div class="showcase-card__info">
-            <span class="eyebrow">Маркетплейсы</span>
-            <h3 class="showcase-card__title">Для брендов и e-commerce</h3>
-            <p class="fcard__body" style="margin-top:0.5rem">Начните продавать товары напрямую через видеостримы на
-              Ozon, Wildberries, Яндекс.Маркет или собственном сайте.</p>
-          </div>
-        </article>
-        <article class="showcase-card reveal-up" style="--delay:0.1s">
-          <div class="showcase-card__media">
-            <div class="media-placeholder media-placeholder--case">
-              <div class="placeholder-shimmer"></div>
-              <span class="placeholder-label">Блогеры и эксперты</span>
+            <div class="showcase-scroll" id="showcase-scroll">
+                <div class="showcase-track">
+                    <article
+                        class="showcase-card reveal-up"
+                        style="--delay: 0s"
+                    >
+                        <div class="showcase-card__media">
+                            <div
+                                class="media-placeholder media-placeholder--case"
+                            >
+                                <div class="placeholder-shimmer"></div>
+                                <span class="placeholder-label"
+                                    >Бренды и e-commerce</span
+                                >
+                            </div>
+                        </div>
+                        <div class="showcase-card__info">
+                            <span class="eyebrow">Маркетплейсы</span>
+                            <h3 class="showcase-card__title">
+                                Для брендов и e-commerce
+                            </h3>
+                            <p class="fcard__body u-mt-05">
+                                Начните продавать товары напрямую через
+                                видеостримы на Ozon, Wildberries, Яндекс.Маркет
+                                или собственном сайте.
+                            </p>
+                        </div>
+                    </article>
+                    <article
+                        class="showcase-card reveal-up"
+                        style="--delay: 0.1s"
+                    >
+                        <div class="showcase-card__media">
+                            <div
+                                class="media-placeholder media-placeholder--case"
+                            >
+                                <div class="placeholder-shimmer"></div>
+                                <span class="placeholder-label"
+                                    >Блогеры и эксперты</span
+                                >
+                            </div>
+                        </div>
+                        <div class="showcase-card__info">
+                            <span class="eyebrow">Масштабирование</span>
+                            <h3 class="showcase-card__title">
+                                Для блогеров и экспертов
+                            </h3>
+                            <p class="fcard__body u-mt-05">
+                                Качественно масштабируйте свой контент,
+                                повышайте лояльность аудитории и монетизируйте
+                                эфиры.
+                            </p>
+                        </div>
+                    </article>
+                    <article
+                        class="showcase-card reveal-up"
+                        style="--delay: 0.2s"
+                    >
+                        <div class="showcase-card__media">
+                            <div
+                                class="media-placeholder media-placeholder--case"
+                            >
+                                <div class="placeholder-shimmer"></div>
+                                <span class="placeholder-label">Агентства</span>
+                            </div>
+                        </div>
+                        <div class="showcase-card__info">
+                            <span class="eyebrow">B2B Партнерство</span>
+                            <h3 class="showcase-card__title">Для агентств</h3>
+                            <p class="fcard__body u-mt-05">
+                                Надежный подрядчик по видеопроизводству, для
+                                которого важны сроки, результат и премиальное
+                                качество картинки.
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </div>
-          <div class="showcase-card__info">
-            <span class="eyebrow">Масштабирование</span>
-            <h3 class="showcase-card__title">Для блогеров и экспертов</h3>
-            <p class="fcard__body" style="margin-top:0.5rem">Качественно масштабируйте свой контент, повышайте
-              лояльность аудитории и монетизируйте эфиры.</p>
-          </div>
-        </article>
-        <article class="showcase-card reveal-up" style="--delay:0.2s">
-          <div class="showcase-card__media">
-            <div class="media-placeholder media-placeholder--case">
-              <div class="placeholder-shimmer"></div>
-              <span class="placeholder-label">Агентства</span>
-            </div>
-          </div>
-          <div class="showcase-card__info">
-            <span class="eyebrow">B2B Партнерство</span>
-            <h3 class="showcase-card__title">Для агентств</h3>
-            <p class="fcard__body" style="margin-top:0.5rem">Надежный подрядчик по видеопроизводству, для которого важны
-              сроки, результат и премиальное качество картинки.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        ADVANTAGES (Почему мы)
   ══════════════════════════════ -->
-  <section class="section section--split" id="advantages">
-    <div class="container split">
-      <div class="split__text reveal-left">
-        <h2 class="split__title">Почему бренды<br>выбирают StreamExpert?</h2>
-        <p class="split__body">
-          Мы объединяем креатив, телевизионное качество и глубокое понимание e-commerce, чтобы ваши стримы приносили
-          реальный результат.
-        </p>
-        <a href="#contact" class="btn btn--primary btn--lg" style="margin-top: var(--s4);">Заказать консультацию →</a>
-      </div>
-      <div class="split__media reveal-right">
-        <ul class="feature-list" style="gap: var(--s6);">
-          <li class="feature-list__item" style="align-items: flex-start; gap: var(--s4);">
-            <div class="fcard__icon" style="width:32px; height:32px; font-size:1rem;">⬡</div>
-            <div>
-              <strong style="color: var(--c-text); font-size: 1.1rem; display: block; margin-bottom: 4px;">Официальный
-                статус</strong>
-              Сертифицированный технологический партнер OZON. Мы знаем алгоритмы площадок изнутри.
+        <section class="section section--split" id="advantages">
+            <div class="container split">
+                <div class="split__text reveal-left">
+                    <h2 class="split__title">
+                        Почему бренды<br />выбирают StreamExpert?
+                    </h2>
+                    <p class="split__body">
+                        Мы объединяем креатив, телевизионное качество и глубокое
+                        понимание e-commerce, чтобы ваши стримы приносили
+                        реальный результат.
+                    </p>
+                    <a href="#contact" class="btn btn--primary btn--lg u-mt-s4"
+                        >Заказать консультацию →</a
+                    >
+                </div>
+                <div class="split__media reveal-right">
+                    <ul class="feature-list u-gap-s6">
+                        <li class="feature-list__item feature-list__item--v2">
+                            <div class="fcard__icon fcard__icon--small">⬡</div>
+                            <div>
+                                <strong class="feature-list__title"
+                                    >Официальный статус</strong
+                                >
+                                Сертифицированный технологический партнер OZON.
+                                Мы знаем алгоритмы площадок изнутри.
+                            </div>
+                        </li>
+                        <li class="feature-list__item feature-list__item--v2">
+                            <div class="fcard__icon fcard__icon--small">◈</div>
+                            <div>
+                                <strong class="feature-list__title"
+                                    >Своя креативная команда</strong
+                                >
+                                Никаких посредников. Режиссеры, сценаристы,
+                                операторы и маркетологи в одном флаконе.
+                            </div>
+                        </li>
+                        <li class="feature-list__item feature-list__item--v2">
+                            <div class="fcard__icon fcard__icon--small">◎</div>
+                            <div>
+                                <strong class="feature-list__title"
+                                    >Без шаблонов</strong
+                                >
+                                Мы строим новые локации и пишем креативные
+                                сценарии — ни один наш стрим не повторяется.
+                            </div>
+                        </li>
+                        <li class="feature-list__item feature-list__item--v2">
+                            <div class="fcard__icon fcard__icon--small">⬟</div>
+                            <div>
+                                <strong class="feature-list__title"
+                                    >Прозрачный процесс</strong
+                                >
+                                Прямой контакт с командой на всех этапах
+                                подготовки и проведения эфира.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </li>
-          <li class="feature-list__item" style="align-items: flex-start; gap: var(--s4);">
-            <div class="fcard__icon" style="width:32px; height:32px; font-size:1rem;">◈</div>
-            <div>
-              <strong style="color: var(--c-text); font-size: 1.1rem; display: block; margin-bottom: 4px;">Своя
-                креативная команда</strong>
-              Никаких посредников. Режиссеры, сценаристы, операторы и маркетологи в одном флаконе.
-            </div>
-          </li>
-          <li class="feature-list__item" style="align-items: flex-start; gap: var(--s4);">
-            <div class="fcard__icon" style="width:32px; height:32px; font-size:1rem;">◎</div>
-            <div>
-              <strong style="color: var(--c-text); font-size: 1.1rem; display: block; margin-bottom: 4px;">Без
-                шаблонов</strong>
-              Мы строим новые локации и пишем креативные сценарии — ни один наш стрим не повторяется.
-            </div>
-          </li>
-          <li class="feature-list__item" style="align-items: flex-start; gap: var(--s4);">
-            <div class="fcard__icon" style="width:32px; height:32px; font-size:1rem;">⬟</div>
-            <div>
-              <strong style="color: var(--c-text); font-size: 1.1rem; display: block; margin-bottom: 4px;">Прозрачный
-                процесс</strong>
-              Прямой контакт с командой на всех этапах подготовки и проведения эфира.
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        CTA / LEAD MAGNET
   ══════════════════════════════ -->
-  <section class="section section--cta section--dark" id="contact">
-    <div class="cta__glow"></div>
-    <div class="container cta__content">
-      <h2 class="cta__title reveal-up">Идеи, которые смотрят.<br>Стримы, которые продают.</h2>
-      <p class="cta__subtitle reveal-up" style="--delay:0.1s">
-        Готовы запустить свой первый продающий прямой эфир? Оставьте заявку на бесплатную консультацию. Мы изучим ваш
-        продукт и предложим готовый креативный концепт стрима в подарок!
-      </p>
+        <section class="section section--cta section--dark" id="contact">
+            <div class="cta__glow"></div>
+            <div class="container cta__content">
+                <h2 class="cta__title reveal-up">
+                    Идеи, которые смотрят.<br />Стримы, которые продают.
+                </h2>
+                <p class="cta__subtitle reveal-up" style="--delay: 0.1s">
+                    Готовы запустить свой первый продающий прямой эфир? Оставьте
+                    заявку на бесплатную консультацию. Мы изучим ваш продукт и
+                    предложим готовый креативный концепт стрима в подарок!
+                </p>
 
-      <form class="form reveal-up" style="--delay:0.2s" onsubmit="event.preventDefault(); alert('Заявка отправлена!');">
-        <input type="text" class="form__input" placeholder="Имя" required>
-        <input type="tel" class="form__input" placeholder="Телефон" required>
-        <input type="text" class="form__input" placeholder="Название компании (бренда)" required>
-        <button type="submit" class="btn btn--primary btn--lg form__btn">Заказать консультацию</button>
-      </form>
+                <form
+                    class="form reveal-up"
+                    style="--delay: 0.2s"
+                    onsubmit="
+                        event.preventDefault();
+                        alert('Заявка отправлена!');
+                    "
+                >
+                    <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Имя"
+                        required
+                    />
+                    <input
+                        type="tel"
+                        class="form__input"
+                        placeholder="Телефон"
+                        required
+                    />
+                    <input
+                        type="text"
+                        class="form__input"
+                        placeholder="Название компании (бренда)"
+                        required
+                    />
+                    <button
+                        type="submit"
+                        class="btn btn--primary btn--lg form__btn"
+                    >
+                        Заказать консультацию
+                    </button>
+                </form>
+            </div>
+        </section>
 
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════
+        <!-- ══════════════════════════════
        FOOTER
   ══════════════════════════════ -->
-  <footer class="footer" id="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#" class="footer__logo">StreamExpert</a>
-        <p class="footer__tagline">Студия товарно-развлекательного контента</p>
-      </div>
-      <nav class="footer__nav" aria-label="Футер-навигация">
-        <div class="footer__col">
-          <h4 class="footer__col-title">Навигация</h4>
-          <ul>
-            <li><a href="#clients">Клиенты</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#audience">Для кого</a></li>
-            <li><a href="#advantages">Преимущества</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__col-title">Контакты</h4>
-          <ul>
-            <li><a href="tel:+79647946720">+7 (964) 794-67-20</a></li>
-            <li><a href="tel:+79315214350">+7 (931) 521-43-50</a></li>
-            <li><a href="mailto:hello@streamexpert.ru">hello@streamexpert.ru</a></li>
-            <li><span style="color: var(--c-muted); font-size: .875rem;">Москва, ул. Ткацкая, д. 5, стр. 2</span></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__col-title">Социальные сети</h4>
-          <ul>
-            <li><a href="#">ВКонтакте</a></li>
-            <li><a href="#">Telegram</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="container footer__bottom">
-      <span>© 2026 StreamExpert. Все права защищены.</span>
-      <div style="display: flex; gap: var(--s4);">
-        <span><a href="#">Политика конфиденциальности</a></span>
-        <span><a href="#">Пользовательское соглашение</a></span>
-      </div>
-    </div>
-  </footer>
+        <footer class="footer" id="footer">
+            <div class="container footer__inner">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">StreamExpert</a>
+                    <p class="footer__tagline">
+                        Студия товарно-развлекательного контента
+                    </p>
+                </div>
+                <nav class="footer__nav" aria-label="Футер-навигация">
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">Навигация</h4>
+                        <ul>
+                            <li><a href="#clients">Клиенты</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#audience">Для кого</a></li>
+                            <li><a href="#advantages">Преимущества</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">Контакты</h4>
+                        <ul>
+                            <li>
+                                <a href="tel:+79647946720"
+                                    >+7 (964) 794-67-20</a
+                                >
+                            </li>
+                            <li>
+                                <a href="tel:+79315214350"
+                                    >+7 (931) 521-43-50</a
+                                >
+                            </li>
+                            <li>
+                                <a href="mailto:hello@streamexpert.ru"
+                                    >hello@streamexpert.ru</a
+                                >
+                            </li>
+                            <li>
+                                <span class="footer__address"
+                                    >Москва, ул. Ткацкая, д. 5, стр. 2</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">Социальные сети</h4>
+                        <ul>
+                            <li><a href="#">ВКонтакте</a></li>
+                            <li><a href="#">Telegram</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="container footer__bottom">
+                <span>© 2026 StreamExpert. Все права защищены.</span>
+                <div class="footer__legal-links">
+                    <span><a href="#">Политика конфиденциальности</a></span>
+                    <span><a href="#">Пользовательское соглашение</a></span>
+                </div>
+            </div>
+        </footer>
 
-  <script>
-    // Загрузка YouTube IFrame API
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('yt-player', {
-        height: '100%',
-        width: '100%',
-        videoId: 'hQntyYEgY_w',
-        playerVars: {
-          'autoplay': 1,
-          'mute': 1,
-          'loop': 1,
-          'playlist': 'hQntyYEgY_w',
-          'controls': 0,
-          'modestbranding': 1,
-          'playsinline': 1,
-          'rel': 0,
-          'showinfo': 0,
-          'disablekb': 1,
-          'fs': 0
-        },
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    }
-
-    function onPlayerReady(event) {
-      event.target.mute(); // Принудительно выключаем звук
-      event.target.playVideo(); // Принудительно запускаем
-
-      // Запускаем счетчик зрителей
-      startViewersCounter();
-    }
-
-    // Имитация роста зрителей
-    function startViewersCounter() {
-      const counterEl = document.getElementById('live-viewers-count');
-      if (!counterEl) return;
-
-      let currentViewers = 12847;
-
-      function updateCounter() {
-        // Рандомно прибавляем от 1 до 4 человек
-        const add = Math.floor(Math.random() * 4) + 1;
-        currentViewers += add;
-
-        // Форматируем число (например: 12 850)
-        counterEl.innerText = currentViewers.toLocaleString('ru-RU');
-
-        // Рандомная задержка от 0.5 до 2.5 секунд до следующего обновления
-        setTimeout(updateCounter, Math.random() * 2000 + 500);
-      }
-
-      // Запускаем первое обновление через 1.5 секунды
-      setTimeout(updateCounter, 1500);
-    }
-  </script>
-  <script src="js/main.js"></script>
-</body>
-
+        <script src="js/main.js"></script>
+    </body>
 </html>
